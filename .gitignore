@@ -1,0 +1,95 @@
+# Node dependencies
+
+/node_modules/
+
+
+# Logs
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Runtime data
+
+pids/
+*.pid
+*.seed
+
+# TypeScript build output
+
+/dist/
+/build/
+/out/
+/lib/
+
+# TypeScript cache and build info
+
+*.tsbuildinfo
+.tsbuildinfo
+
+# ts-node cache
+
+.ts-node/
+.ts-node-dev/
+
+# Compiled JavaScript and sourcemaps (if present)
+
+**/*.js
+**/*.js.map
+*.java
+# Ignore compiled files but allow source .ts
+
+# (remove the next two lines if you commit compiled files)
+
+!**/*.ts
+
+# Environment files
+
+.env
+.env.*.local
+.env.local
+.env.production
+.env.test
+
+# Test coverage
+
+/coverage/
+.nyc_output/
+
+# IDEs and editors
+
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Temporary files
+
+tmp/
+temp/
+*.tmp
+
+# npm/yarn lock (optional — usually committed)
+
+# Uncomment if you don't want to track lockfiles
+
+# package-lock.json
+
+# yarn.lock
+
+# pnpm-lock.yaml
+
+# Misc
+
+.vscode-test/
+*.tgz
+.node_repl_history
+.cache/
