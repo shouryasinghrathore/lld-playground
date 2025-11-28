@@ -4,7 +4,8 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "ignoreDeprecations": "6.0"
   },
   "ts-node": {
     "esm": false
