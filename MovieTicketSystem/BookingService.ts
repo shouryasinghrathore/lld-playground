@@ -1,7 +1,7 @@
 import { Seat } from "./seat";
 import { Booking } from "./Booking";
 import { Show } from "./show";
-import { User } from "./User";
+import { User } from "./user";
 
 export class BookingService {
   createBooking(user: User, show: Show, seats: Seat[]): Booking {

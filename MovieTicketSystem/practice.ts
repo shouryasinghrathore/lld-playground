@@ -2,7 +2,7 @@ import { Seat } from "./seat";
 import { Show } from "./show";
 import { Movie } from "./Movie";
 import { BookingService } from "./BookingService";
-import { User } from "./User";
+import { User } from "./user";
 
 function createSeats(count: number, row = "A"): Seat[] {
 	const seats: Seat[] = [];
