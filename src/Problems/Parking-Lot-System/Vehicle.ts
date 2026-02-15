@@ -1,10 +1,13 @@
 export enum VehicleType {
-  CAR,
-  BIKE,
-  TRUCK,
+  MOTORCYCLE = "MOTORCYCLE",
+  CAR = "CAR",
+  TRUCK = "TRUCK",
 }
 
 
 export class Vehicle {
-  constructor(public number: string, public type: VehicleType) {}
+  constructor(
+    public readonly licensePlate: string,
+    public readonly type: VehicleType
+  ) {}
 }

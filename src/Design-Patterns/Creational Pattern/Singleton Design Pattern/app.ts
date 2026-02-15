@@ -2,7 +2,7 @@ export class DbConnection {
     private static instance: DbConnection;
     private constructor(){}
 
-    getInstance(){
+   static getInstance(){
         if(!DbConnection.instance){
            DbConnection.instance = new DbConnection();
         }
@@ -10,7 +10,7 @@ export class DbConnection {
     }
 }
 
-const db1 = DbConnection.prototype.getInstance();
-const db2 = DbConnection.prototype.getInstance();
+const db1 = DbConnection.getInstance();
+const db2 = DbConnection.getInstance();
 
 console.log("Are both instances equal? ", db1 === db2);

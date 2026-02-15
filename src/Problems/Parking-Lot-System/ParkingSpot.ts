@@ -1,23 +1,36 @@
 import { Vehicle, VehicleType } from "./Vehicle";
 
 export class ParkingSpot {
-  parkedVehicle: Vehicle | null = null;
+  private parkedVehicle: Vehicle | null = null;
 
   constructor(
-    public spotId: number,
-    public type: VehicleType,
-    public isFree: boolean = true
+    public readonly spotId: string,
+    public readonly type: VehicleType
   ) {}
 
-  park(vehicle: Vehicle): boolean {
-    if (!this.isFree || this.type !== vehicle.type) return false;
+  public isFree(): boolean {
+    return this.parkedVehicle === null;
+  }
+
+  public canFit(vehicle: Vehicle): boolean {
+    return vehicle.type === this.type;
+  }
+
+  public park(vehicle: Vehicle): boolean {
+    if (!this.isFree()) return false;
+    if (!this.canFit(vehicle)) return false;
+
     this.parkedVehicle = vehicle;
-    this.isFree = false;
     return true;
   }
 
-  unpark(): void {
+  public unpark(): Vehicle | null {
+    const vehicle = this.parkedVehicle;
     this.parkedVehicle = null;
-    this.isFree = true;
+    return vehicle;
+  }
+
+  public getVehicle(): Vehicle | null {
+    return this.parkedVehicle;
   }
 }
